@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+
+/* CSS RESET */  
+body, h1, h2, h3, h4, h5, h6, p, ol, ul {
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+    font-family: 'Space Grotesk', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+  
+ol, ul {
+    list-style: none;
+}
+
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+a{
+    text-decoration: none;
+}
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+body{
+    background-color: #dddace;
+}
+.header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.logo{
+    
+    background-color: #212121;
+    width: 100vw;
+    padding: 16px 32px;
+    text-align: center;
+}
+.logo > a{
+    font-family:'Space Grotesk', sans-serif ;
+    font-size: 32px;
+    color: #f2f3f4;
+}
+.navbar{
+    width: 100vw;
+    display: flex;
+    justify-content: space-around;
+    background-color: #00447c;
+    padding: 8px 16px;
+    box-shadow: 0 3px 2px -2px rgba(0, 0, 0, 0.523);
+}
+.navbar > a{
+    color: #f2f3f4;;
+}
+.navbar> .active{
+    border-bottom: 2px solid #f2f3f4;;
+}
+.hero{
+    background: url("../assets/hero-bg.jpg") #0b7b9e center no-repeat;
+    background-size: cover;
+    padding: 32px;
+    color: #f2f3f4;
+    font-family: 'Space Grotesk', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: center;
+    font-size: 40px;
+    text-shadow: 2px 2px 4px #212121;
+    cursor: pointer;
+}
