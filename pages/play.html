@@ -21,42 +21,93 @@
 
         </div>
     </div>
-    <div class="card card-1" id = >
-        <div class="top">
-            <div style="width:100%;height:0;padding-bottom:84%;position:relative;"><iframe src="https://giphy.com/embed/u1WhXLjwgcXpHJBMRM" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div><p></p>
+    <div class="games-container invisible">
+        <div class="card card-1 quiz-card" id = >
+            <div class="top">
+                <div style="width:100%;height:0;padding-bottom:84%;position:relative;"><iframe src="https://giphy.com/embed/u1WhXLjwgcXpHJBMRM" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div><p></p>
+            </div>
+            <div class="bottom">
+                <p style="height: 40px;">Computer Science Quiz</p>
+                <p style="font-size: 10px; color: grey; height: 16px;">Try to get as many CS Fundamentals questions as you can right!</p>
+            </div>
+            </div>
+        <div class="card card-1">
+            <div class="top">
+                <img src="https://justacoding.blog/wp-content/uploads/2021/10/reaction.jpg" alt="material ui"/>
+            </div>
+            <div class="bottom">
+                <p style="height: 40px;">Reaction Game</p>
+                <p style="font-size: 10px; color: grey; height: 16px;">Test your reaction time!</p>
+            </div>
         </div>
-        <div class="bottom">
-            <p style="height: 40px;">Computer Science Quiz</p>
-            <p style="font-size: 10px; color: grey; height: 16px;">Try to get as many CS Fundamentals questions as you can right!</p>
-        </div>
-        </div>
-    <div class="card card-1">
-        <div class="top">
-            <img src="https://justacoding.blog/wp-content/uploads/2021/10/reaction.jpg" alt="material ui"/>
-        </div>
-        <div class="bottom">
-            <p style="height: 40px;">Reaction Game</p>
-            <p style="font-size: 10px; color: grey; height: 16px;">Test your reaction time!</p>
-        </div>
-    </div>
-
     
-
-    <div class="card card-1">
-    <div class="top">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/d/da/TicTacToe-152374698XOp.gif" alt="material ui"/>
-    </div>
-    <div class="bottom">
-        <p style="height: 40px;">Tic Tac Toe</p>
-        <p style="font-size: 10px; color: grey; height: 16px;">Play Tic Tac Toe vs an AI!</p>
+        
+    
+        <div class="card card-1">
+        <div class="top">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/d/da/TicTacToe-152374698XOp.gif" alt="material ui"/>
+        </div>
+        <div class="bottom">
+            <p style="height: 40px;">Tic Tac Toe</p>
+            <p style="font-size: 10px; color: grey; height: 16px;">Play Tic Tac Toe vs an AI!</p>
+            </div>
         </div>
     </div>
+    <div class="quiz-game invisible">
+        <!--- Based on "Simple JavaScript Quiz" tutorial by Eduonix Learning Solutions --->
+
+<div id="container">
+    <header>
+      <h1>CS Fundamentals Quiz</h1>
+      <p>Test your knowledge in <strong>Computer Science</strong></p>
+    </header>
+    <section id = "questions">
+      <form name="quizForm" >
+        <h3>1.  ________ deletes a data item from a database.</h3>
+        <input type="radio" name="q1" value="a" id="q1a">a. Insert(RDBMS)<br>
+        <input type="radio" name="q1" value="b" id="q1b">b. Drop(RDBMS)<br>
+        <input type="radio" name="q1" value="c" id="q1c">c. Delete(RDBMS)<br>
+        <input type="radio" name="q1" value="d" id="q1d">d. None of the above<br>
+  
+        <h3>2. Which HTML attribute is used to reference an external JavaScript file?</h3>
+        <input type="radio" name="q2" value="a" id="q2a">a. src<br>
+        <input type="radio" name="q2" value="b" id="q2b">b. rel<br>
+        <input type="radio" name="q2" value="c" id="q2c">c. type<br>
+        <input type="radio" name="q2" value="d" id="q2d">d. href<br>
+  
+        <h3>3. Which of the following machine learning algorithm is based upon the idea of bagging?</h3>
+        <input type="radio" name="q3" value="a" id="q3a">a. Decision Tree<br>
+        <input type="radio" name="q3" value="b" id="q3b">b. Random-Forest<br>
+        <input type="radio" name="q3" value="c" id="q3c">c. Classification<br>
+        <input type="radio" name="q3" value="d" id="q3d">d. Regression<br>
+  
+        <h3>4. How much bytes of memory does void occupy in C++?</h3>
+        <input type="radio" name="q4" value="a" id="q4a">a. 0<br>
+        <input type="radio" name="q4" value="b" id="q4b">b. 1<br>
+        <input type="radio" name="q4" value="c" id="q4c">b. 2<br>
+        <input type="radio" name="q4" value="d" id="q4d">b. 4<br>
+  
+        <h3>5. Banker's algorithm is used in Operating Systems?</h3>
+        <input type="radio" name="q5" value="a" id="q5a">a. To Prevent Deadlock<br>
+        <input type="radio" name="q5" value="b" id="q5b">b. To Deadlock Recovery<br>
+        <input type="radio" name="q5" value="c" id="q5c">c. To solve the deadlock<br>
+        <input type="radio" name="q5" value="d" id="q5d">d. None of these<br>
+        <br><br>
+        <input type="submit" value="Submit Answers">
+      </form>
+      <div id="results"></div>
+    </section>
+  </div>
+  <button class="backToGamesPage">View other games</button>
+    </div>
+    <h4 class="notLoggedIn" style="margin-top: 45%; text-align: center; color: rgb(116, 84, 84); font-size: 32px;">Login to access minigames.</h4>
     <div class="footer">
         Made with ❤️ by Team bottomG (Ashin, Rohan, Rahul, Ankur)
     </div>
     <script src = "../src/firebaseinit.js" type="module"></script>
     <script src = "../src/index.js"></script>
     <script src ="../src/uiLoggedin.js" type="module"></script>
-
+    <script src ="../src/playPage.js" type="module"></script>
+    <script src="../src/quiz.js"></script>
 </body>
 </html>

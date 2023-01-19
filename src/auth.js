@@ -47,6 +47,8 @@ const logIn = (email,password) => {
     .catch((error) => {
         const errorCode = error.code;
         const errorMessage = error.message;
+        document.querySelector(".loginMessage").innerHTML="Invalid Credentials";
+        document.querySelector(".loginMessage").style.color = 'red';
     });
 }
 
