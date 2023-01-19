@@ -1,0 +1,132 @@
+.register{
+    padding: 16px 4px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.register > h4{
+    color: grey;
+    font-size: 14px;
+}
+.register-card{
+    margin-top: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    background-color: #dcdbd6;
+    padding: 16px 24px;
+    width: fit-content;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+.register-card > div{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+    /* width: 100%; */
+}
+.register-card > div > label{
+    font-size: 12px;
+}
+.register-card > div > input{
+    box-shadow: 0 1px 2px rgba(0,0,0,0.12);
+    background-color: transparent;
+    border-radius: 5px;
+    padding: 8px;
+    border: 1px solid grey;
+    outline: none;
+    color: rgba(0, 0, 0, 0.552);
+    width: 100%;
+}
+.register-card > div > input:focus{
+    border: 2px solid #003865;
+}
+#registerbutton{
+    cursor: pointer;
+    width: 100%;
+    padding: 8px;
+    border-radius: 5px;
+    border: none;
+    background-color: #00447c;
+    color: #eaeaea;
+    font-family: 'Space Grotesk', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bold;
+    transition: transform 0.1s ease-in-out;
+}
+#registerbutton:hover{
+    background-color: #003865;
+}
+#registerbutton:active{
+    transform: scale(0.97);
+}
+
+.login{
+    padding: 16px 4px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.login > h4{
+    color: grey;
+    font-size: 14px;
+}
+.login-card{
+    margin-top: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    background-color: #dcdbd6;
+    padding-left: 32px;
+    padding-right: 48px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    width: fit-content;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+.login-card > div{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+    width: 100%;
+}
+.login-card > div > label{
+    font-size: 12px;
+}
+.login-card > div > input{
+    box-shadow: 0 1px 2px rgba(0,0,0,0.12);
+    background-color: transparent;
+    border-radius: 5px;
+    padding: 8px;
+    border: 1px solid grey;
+    outline: none;
+    color: rgba(0, 0, 0, 0.552);
+    width: 100%;
+}
+.login-card > div > input:focus{
+    border: 2px solid #003865;
+}
+#loginbutton{
+    cursor: pointer;
+    width: 100%;
+    padding: 8px;
+    border-radius: 5px;
+    border: none;
+    background-color: #00447c;
+    color: #eaeaea;
+    font-family: 'Space Grotesk', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bold;
+    transition: transform 0.1s ease-in-out;
+}
+#loginbutton:hover{
+    background-color: #003865;
+}
+#loginbutton:active{
+    transform: scale(0.97);
+}
