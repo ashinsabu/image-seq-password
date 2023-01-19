@@ -44,6 +44,10 @@ onAuthStateChanged(auth, (user) => {
         })
         
     }
+    if(document.querySelector('#infoUsername')){
+        document.querySelector('#infoUsername').innerHTML += `<span style="color: black; font-size: 18px;">${user.displayName}</span>`;
+        document.querySelector('#infoEmail').innerHTML += `<span style="color: black; font-size: 16px;">${user.email}</span>`;
+    }
     
   } else {
     // User is signed out

@@ -130,3 +130,50 @@
 #loginbutton:active{
     transform: scale(0.97);
 }
+.password-container > p{
+    color: grey;
+    font-size: 12px;
+}
+.password-type-selector{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.password-type-selector > label{
+    font-size: 12px;
+}
+.password-creator-container > p{
+    color: #002756;
+    font-size: 14px;
+    font-weight: bold;
+}
+.interest-list{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+}
+.interest-list span{
+    font-size: 14px;
+    color: rgb(62, 62, 62);
+}
+.registerPasswordSeq{
+    min-height: 64px;
+    display: flex;
+    gap: 4px;
+    flex-wrap: wrap;
+    border: 1px solid grey;
+    border-radius: 5px;
+}
+.registerPswImage{
+    border: 1px solid black;
+
+}
+.register-images-area{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}

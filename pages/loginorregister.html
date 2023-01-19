@@ -22,7 +22,7 @@
         </div>
     </div>
 
-    <div class="register invisible">
+    <div class="register invisible" >
         <h3>Register for free</h3>
         <h4>Or <span style="cursor: pointer; color: #002756; text-decoration: underline;" id="switchtologin">Login to your existing account</span></h4>
         <div class="register-card">
@@ -34,29 +34,121 @@
                 <label for="registerEmail">Email</label>
                 <input type="email" id="registerEmail" name="registerEmail" placeholder="Enter your Email Address">
             </div>
-            <div>
-                <label for="registerPassword">Password</label>
+            <div class="password-container">
+                <label for="registerPassword">Password Creation</label>
+                <p>Select type of password to use</p>
+                <div class="password-type-selector">
+                    <input type="radio" id="textPasswordRegister" name="passwordType" value="textPassword" checked="checked">
+                    <label for="textPassword">Text</label><br>
+                    <input type="radio" id="imagePasswordRegister" name="passwordType" value="imagePassword">
+                    <label for="imagePassword">Image Sequence</label><br>
+                </div>
                 <input type="password" id="registerPassword" name="registerPassword" placeholder="Enter your password">
+                <div class="password-creator-container invisible">
+                    <div style="display:flex; justify-content: space-between; margin-bottom: 4px;">
+                        <p>Created Sequence</p> 
+                        <button style="background-color: rgb(242, 102, 125); color: white; border: none; padding: 2px 4px; border-radius: 2px; " id="resetRegisterSequence">Reset</button>
+                    </div>
+                    
+                    <div class="registerPasswordSeq">
+
+                    </div>
+                    <p style="margin-bottom: 16px; margin-top: 16px;">Select interests to display photos.</p>
+                    <div class="interest-list">
+                        <div>
+                            <input type="checkbox" value="dogs" id="registerDogs"><span>Dogs</span>
+                        </div>
+                        <div>
+                            <input type="checkbox" value="cats" id="registerCats"><span>Cats</span>
+                        </div>
+                        <div>
+                            <input type="checkbox" value="inst" id="registerInstruments"><span>Instruments</span>
+                        </div>
+                        <div>
+                            <input type="checkbox" value="cars" id="registerCars"><span>Cars</span>
+                        </div>
+                        <div>
+                            <input type="checkbox" value="brands" id="registerBrands"><span>Brands</span>
+                        </div>
+                        <div>
+                            <input type="checkbox" value="personalities" id="registerPersonalities"><span>Personalities</span>
+                        </div>
+                    </div>
+                    <div class="register-images-area" style="margin-top: 16px;">
+                        <!-- <img src="../assets/cat_01.jpg" class="registerPswImage cat_01" width="72px"> -->
+                    </div>
+                </div>
             </div>
             <p style="font-size: 10px; text-align: center; color: grey;">By signing up, you agree to our terms of use.</p>
             <p id="registerMessage" style="font-size: 10px; text-align: center; color: grey;"></p>
             <button id="registerbutton">Register</button>
         </div>
     </div>
+
     <div class="login">
         <h3>Login to your account</h3>
         <h4>Or <span style="cursor: pointer; color: #002756; text-decoration: underline;" id="switchtoregister">Create a new account</span></h4>
+        
         <div class="login-card">
             <div>
                 <label for="loginEmail">Email</label>
                 <input type="email" id="loginEmail" name="loginEmail" placeholder="Enter your Email Address">
             </div>
-            <div>
-                <label for="loginPassword">Password</label>
+
+            <div class="password-container">
+                <label for="registerPassword">Password</label>
+
+                <p>Select type of password you use</p>
+                <div class="password-type-selector">
+                    <input type="radio" id="textPasswordLogin" name="passwordType" value="textPassword" checked="checked">
+                    <label for="textPassword">Text</label><br>
+                    <input type="radio" id="imagePasswordLogin" name="passwordType" value="imagePassword">
+                    <label for="imagePassword">Image Sequence</label><br>
+                </div>
+
                 <input type="password" id="loginPassword" name="loginPassword" placeholder="Enter your password">
+
+                <div class="password-creator-container invisible">
+                   
+                    <div style="display:flex; justify-content: space-between; margin-bottom: 4px;">
+                        <p>Password</p> 
+                        <button style="background-color: rgb(242, 102, 125); color: white; border: none; padding: 2px 4px; border-radius: 2px; " id="resetLoginSequence">Reset</button>
+                    </div>
+                    
+                    <div class="loginPasswordSeq">
+
+                    </div>
+
+                    <p style="margin-bottom: 16px; margin-top: 16px;">Select interests to display photos.</p>
+
+                    <div class="interest-list">
+                        <div>
+                            <input type="checkbox" value="dogs" id="loginDogs"><span>Dogs</span>
+                        </div>
+                        <div>
+                            <input type="checkbox" value="cats" id="loginCats"><span>Cats</span>
+                        </div>
+                        <div>
+                            <input type="checkbox" value="inst" id="loginInstruments"><span>Instruments</span>
+                        </div>
+                        <div>
+                            <input type="checkbox" value="cars" id="loginCars"><span>Cars</span>
+                        </div>
+                        <div>
+                            <input type="checkbox" value="brands" id="loginBrands"><span>Brands</span>
+                        </div>
+                        <div>
+                            <input type="checkbox" value="personalities" id="loginPersonalities"><span>Personalities</span>
+                        </div>
+                    </div>
+                    <div class="login-images-area" style="margin-top: 16px;">
+                        <!-- <img src="../assets/cat_01.jpg" class="registerPswImage cat_01" width="72px"> -->
+                    </div>
+                </div>
             </div>
             <button id="loginbutton">Login</button>
         </div>
+
     </div>
     <div class="footer">
         Made with ❤️ by Team bottomG (Ashin, Rohan, Rahul, Ankur)
