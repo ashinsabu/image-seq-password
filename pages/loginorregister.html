@@ -38,10 +38,10 @@
                 <label for="registerPassword">Password Creation</label>
                 <p>Select type of password to use</p>
                 <div class="password-type-selector">
-                    <input type="radio" id="textPasswordRegister" name="passwordType" value="textPassword" checked="checked">
-                    <label for="textPassword">Text</label><br>
-                    <input type="radio" id="imagePasswordRegister" name="passwordType" value="imagePassword">
-                    <label for="imagePassword">Image Sequence</label><br>
+                    <input type="radio" id="textPasswordRegister" name="registerPasswordType" value="textPasswordReg" checked="checked">
+                    <label for="textPasswordRegister">Text</label><br>
+                    <input type="radio" id="imagePasswordRegister" name="registerPasswordType" value="imagePasswordReg">
+                    <label for="imagePasswordRegister">Image Sequence</label><br>
                 </div>
                 <input type="password" id="registerPassword" name="registerPassword" placeholder="Enter your password">
                 <div class="password-creator-container invisible">
@@ -96,20 +96,20 @@
             </div>
 
             <div class="password-container">
-                <label for="registerPassword">Password</label>
+                <label for="loginPassword">Password</label>
 
                 <p>Select type of password you use</p>
                 <div class="password-type-selector">
-                    <input type="radio" id="textPasswordLogin" name="passwordType" value="textPassword" checked="checked">
+                    <input type="radio" id="textPasswordLogin" name="loginPasswordType" value="textPassword" checked="checked">
                     <label for="textPassword">Text</label><br>
-                    <input type="radio" id="imagePasswordLogin" name="passwordType" value="imagePassword">
+                    <input type="radio" id="imagePasswordLogin" name="loginPasswordType" value="imagePassword">
                     <label for="imagePassword">Image Sequence</label><br>
                 </div>
 
                 <input type="password" id="loginPassword" name="loginPassword" placeholder="Enter your password">
 
-                <div class="password-creator-container invisible">
-                   
+                <div class="password-writer-container invisible">
+                    
                     <div style="display:flex; justify-content: space-between; margin-bottom: 4px;">
                         <p>Password</p> 
                         <button style="background-color: rgb(242, 102, 125); color: white; border: none; padding: 2px 4px; border-radius: 2px; " id="resetLoginSequence">Reset</button>

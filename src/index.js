@@ -87,6 +87,22 @@ let imgList = {
         },
     ]
 }
+// Fisher-Yates-Durstenfeld shuffle:
+function shuffle(sourceArray) {
+    for (var i = 0; i < sourceArray.length - 1; i++) {
+        var j = i + Math.floor(Math.random() * (sourceArray.length - i));
+
+        var temp = sourceArray[j];
+        sourceArray[j] = sourceArray[i];
+        sourceArray[i] = temp;
+    }
+    return sourceArray;
+}
+for(const property in imgList){
+    // console.log(`${property}: ${imgList[property]}`);
+    imgList[`${property}`] = shuffle(imgList[`${property}`]);
+}
+// console.log(imgList['dogs']);
 registerPassword = "";
 // registration ui switches
 if(document.querySelector('#registerPassword')){
@@ -163,26 +179,30 @@ if(document.querySelector('#resetRegisterSequence')){
 
 
 
-
+let loginPassword = "";
 
 if(document.querySelector('#loginPassword')){
     //switch to image password
     document.querySelector('#textPasswordLogin').addEventListener('click', () => {
 
         document.querySelector('#loginPassword').style.display = 'block';
-        document.querySelector('.password-creator-container').classList.add('invisible');
+        document.querySelector('.password-writer-container').classList.add('invisible');
 
-    })
+    });
+
     //switch to text password
     document.querySelector('#imagePasswordLogin').addEventListener('click', () => {
-        
-        document.querySelector('#loginPassword').style.display = 'none';
-        document.querySelector('.password-creator-container').classList.remove('invisible');
 
-    })
+        document.querySelector('#loginPassword').style.display = 'none';
+        document.querySelector('.password-writer-container').classList.remove('invisible');
+
+    });
 
     document.querySelectorAll('input[type="checkbox"]').forEach((interest) => {
-        interest.addEventListener('click', () => {
+        // console.log(interest.id);
+        if(interest.id.includes("login")){
+            // console.log(interest.id);
+            interest.addEventListener('click', () => {
             if(interest.checked){
                 for(let i =0;i<imgList[interest.value].length;i++){
                     // console.log(imgList[interest.value][i].url);
@@ -191,7 +211,7 @@ if(document.querySelector('#loginPassword')){
                     imgg.width = 72;
                     imgg.height = 72;
                     imgg.dataset.code = imgList[interest.value][i].code;
-                    imgg.classList.add('registerPswImage');
+                    imgg.classList.add('loginPswImage');
                     imgg.classList.add(imgList[interest.value][i].code);
 
                     imgg.addEventListener('click', () => {
@@ -199,12 +219,12 @@ if(document.querySelector('#loginPassword')){
                         newImg.src = imgg.src;
                         newImg.width=72;
                         newImg.height=72;
-                        registerPassword += imgList[interest.value][i].code;
-                        console.log(registerPassword);
-                        document.querySelector('.registerPasswordSeq').append(newImg);
+                        loginPassword += imgList[interest.value][i].code;
+                        // console.log(registerPassword);
+                        document.querySelector('.loginPasswordSeq').append(newImg);
                     });
 
-                    document.querySelector('.register-images-area').append(imgg);
+                    document.querySelector('.login-images-area').append(imgg);
                 }
             }
             else{
@@ -215,19 +235,14 @@ if(document.querySelector('#loginPassword')){
                     // document.querySelector('.register-images-area').append(imgg);
                 }
             }
-            // console.log('test');
-            // document.querySelectorAll('.registerPswImage').forEach((imgg) => {
-            //     imgg.removeEventListener('click', handleClick);
-            //     imgg.addEventListener('click',  function handleClick() {
-            //         console.log("test");
-            //         let newImg = document.createElement('img');
-            //         newImg.src = imgg.src;
-            //         newImg.width='72px';
-            //         document.querySelector('.registerPasswordSeq').append(newImg);
-            //     })
-            // })
         });
-
+    }
         
+    })
+}
+if(document.querySelector('#resetLoginSequence')){
+    document.querySelector('#resetLoginSequence').addEventListener('click', () => {
+        document.querySelector('.loginPasswordSeq').innerHTML = "";
+        loginPassword = "";
     })
 }

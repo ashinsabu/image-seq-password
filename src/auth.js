@@ -100,13 +100,13 @@ document.querySelector('#registerbutton').addEventListener('click', () => {
         // console.log(password);
         // return;
     }
-    if(password.length > 5 && ValidateEmail(email)){
+    if(password.length > 2 && ValidateEmail(email)){
         signUp(username,email,password);
         document.querySelector('#registerMessage').style.color = 'green';
         document.querySelector('#registerMessage').textContent = 'Registered Successfully! Redirecting in 3 seconds';
         setTimeout(()=>{
             window. location. replace("../index.html");
-        },1000)
+        },3000)
     }
     else{
         document.querySelector('#registerMessage').style.color = 'red';
@@ -116,7 +116,15 @@ document.querySelector('#registerbutton').addEventListener('click', () => {
 
 document.querySelector('#loginbutton').addEventListener('click', () => {
     let email = document.querySelector('#loginEmail').value;
-    let password = document.querySelector('#loginPassword').value;
+    let password;
+    if(document.querySelector('#textPasswordLogin').checked)
+        password = document.querySelector('#loginPassword').value;
+    else{
+        password = loginPassword;
+        // console.log(password);
+        // return;
+    }
+    // document.querySelector('#loginPassword').value
     logIn(email,password);
 
 })
