@@ -39,6 +39,9 @@ const logIn = (email,password) => {
     .then((userCredential) => {
         // Signed in 
         const user = userCredential.user;
+        setTimeout(() => {
+            window.location.href = "../index.html";
+        },500);
         // ...
     })
     .catch((error) => {
@@ -49,31 +52,31 @@ const logIn = (email,password) => {
 
 
 
-const logOut = () => {
-    const auth = getAuth();
-    signOut(auth).then(() => {
-    // Sign-out successful.
-    }).catch((error) => {
-    // An error happened.
-    });
-}
+// const logOut = () => {
+//     const auth = getAuth();
+//     signOut(auth).then(() => {
+//     // Sign-out successful.
+//     }).catch((error) => {
+//     // An error happened.
+//     });
+// }
 
-const auth = getAuth();
-onAuthStateChanged(auth, (user) => {
-  if (user) {
-    // User is signed in, see docs for a list of available properties
-    // https://firebase.google.com/docs/reference/js/firebase.User
-    const uid = user.uid;
-    console.log(user);
-    // ...
-    document.querySelector('#loginregisterbutton').classList.add('invisible');
-  } else {
-    // User is signed out
-    // ...
-    console.log("no user");
-    document.querySelector('#loginregisterbutton').classList.remove('invisible');
-  }
-});
+// const auth = getAuth();
+// onAuthStateChanged(auth, (user) => {
+//   if (user) {
+//     // User is signed in, see docs for a list of available properties
+//     // https://firebase.google.com/docs/reference/js/firebase.User
+//     const uid = user.uid;
+//     console.log(user);
+//     // ...
+//     document.querySelector('#loginregisterbutton').classList.add('invisible');
+//   } else {
+//     // User is signed out
+//     // ...
+//     console.log("no user");
+//     document.querySelector('#loginregisterbutton').classList.remove('invisible');
+//   }
+// });
 
 //utility functions
 function ValidateEmail(mail) 
@@ -102,4 +105,11 @@ document.querySelector('#registerbutton').addEventListener('click', () => {
         document.querySelector('#registerMessage').style.color = 'red';
         document.querySelector('#registerMessage').textContent = 'Invalid Email/Password';
     }
+})
+
+document.querySelector('#loginbutton').addEventListener('click', () => {
+    let email = document.querySelector('#loginEmail').value;
+    let password = document.querySelector('#loginPassword').value;
+    logIn(email,password);
+
 })

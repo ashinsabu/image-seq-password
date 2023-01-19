@@ -18,12 +18,13 @@
             <a href="../pages/play.html" >Play</a>
             <a href="../pages/about.html" >About</a>
             <a href="../pages/loginorregister.html"  id="loginregisterbutton" style="color: #0c0c0c;">Login/Register</a>
+            <a href="../pages/account.html" id="view-acc-button"></a>
         </div>
     </div>
 
-    <div class="register">
+    <div class="register invisible">
         <h3>Register for free</h3>
-        <h4>Or <span style="cursor: pointer; color: #002756; text-decoration: underline;">Login to your existing account</span></h4>
+        <h4>Or <span style="cursor: pointer; color: #002756; text-decoration: underline;" id="switchtologin">Login to your existing account</span></h4>
         <div class="register-card">
             <div>
                 <label for="registerUsername">Username</label>
@@ -44,7 +45,7 @@
     </div>
     <div class="login">
         <h3>Login to your account</h3>
-        <h4>Or <span style="cursor: pointer; color: #002756; text-decoration: underline;">Create a new account</span></h4>
+        <h4>Or <span style="cursor: pointer; color: #002756; text-decoration: underline;" id="switchtoregister">Create a new account</span></h4>
         <div class="login-card">
             <div>
                 <label for="loginEmail">Email</label>
@@ -57,8 +58,23 @@
             <button id="loginbutton">Login</button>
         </div>
     </div>
+    <div class="footer">
+        Made with ❤️ by Team bottomG (Ashin, Rohan, Rahul, Ankur)
+    </div>
     <script src = "../src/firebaseinit.js" type="module"></script>
     <script src = "../src/index.js"></script>
     <script src = "../src/auth.js" type="module"></script>
+    <script src ="../src/uiLoggedin.js" type="module"></script>
+    <script defer>
+        document.querySelector('#switchtoregister').addEventListener('click',() => {
+            document.querySelector('.login').classList.add('invisible');
+            document.querySelector('.register').classList.remove('invisible');
+        });
+
+        document.querySelector('#switchtologin').addEventListener('click',() => {
+            document.querySelector('.register').classList.add('invisible');
+            document.querySelector('.login').classList.remove('invisible');
+        })
+    </script>
 </body>
 </html>
