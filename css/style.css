@@ -61,8 +61,11 @@ body{
 .navbar > a{
     color: #f2f3f4;;
 }
+.navbar > a:hover{
+    border-bottom: 2px solid #f2f3f4;
+}
 .navbar> .active{
-    border-bottom: 2px solid #f2f3f4;;
+    border-bottom: 2px solid #f2f3f4;
 }
 .hero{
     background: url("../assets/hero-bg.jpg") #0b7b9e center no-repeat;
