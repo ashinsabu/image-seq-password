@@ -246,3 +246,8 @@ if(document.querySelector('#resetLoginSequence')){
         loginPassword = "";
     })
 }
+if(document.querySelector('.homepageCard')){
+    document.querySelector('.homepageCard').addEventListener('click', () => {
+        document.querySelector('.suggestion-form').classList.remove('notvisible');
+    })
+}

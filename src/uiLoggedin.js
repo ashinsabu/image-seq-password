@@ -61,5 +61,8 @@ onAuthStateChanged(auth, (user) => {
     viewAcc.style.display = 'none';
     document.querySelector('#loginregisterbutton').classList.remove('invisible');
     document.querySelector('.getStartedNow').classList.remove('invisible');
+    if(document.querySelector('.suggestion-form')){
+        document.querySelector('.suggestion-form').remove();
+    }
   }
 })

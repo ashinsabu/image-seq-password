@@ -269,11 +269,9 @@ body{
     box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
     backdrop-filter: blur( 4px );
     -webkit-backdrop-filter: blur( 4px );
-    margin-left: 0;
-    margin-right: 0;
     width: 100vw;
     /* transform: translateX(-32px); */
-    margin-left: -32px;
+    /* margin-left: -32px; */
     /* paddingp-right: 16px; */
     padding-top: 16px;
     padding-bottom: 16px;
@@ -326,4 +324,33 @@ body{
       background-color: #0091b2;
       box-shadow: 0 0 3px #0091b2;
     }
+  }
+  .notvisible{
+    height: 0;
+    
+    transform: scale(0);
+    /* display: none; */
+  }
+  .suggestion-form{
+    border: 1px solid grey;
+    width: 60vw !important;
+    padding: 16px;
+
+    background: rgba( 255, 255, 255, 0.25 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    /* transition: transform 0.1s ease-in-out; */
+  }
+  .suggestion-form label{
+    font-size: 14px;
+  }
+  .suggestion-form input{
+    background-color: transparent;
+    outline: none;
+    border: 2px solid grey;
+    padding: 2px;
+    margin: 2px;
   }

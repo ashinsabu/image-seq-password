@@ -8,7 +8,7 @@
     
     <title>bottomG</title>
 </head>
-<body>
+<body style="display: flex; flex-direction: column; align-items: center;">
     <div class="header">
         <div class="logo">
             <a href ="index.html">bottomG</a>
@@ -27,6 +27,22 @@
         <p>Login and access all the minigames available to you!</p>
         <div class="homepageCard invisible"><p>Suggest images and interests to add to list for authentication!</p></div>
     </div>
+    <form class="suggestion-form notvisible" style="width: 100%; text-align: center; margin-top: 16px;">
+        <h4 style="margin-bottom: 8px;">Suggestion Form</h4>
+       <div>
+        <label>Name:</label>
+        <input type="text">
+       </div>
+       <div>
+        <label>Email:</label>
+        <input type="email">
+       </div>
+        <div>
+            <label>Image URL or other suggestion</label>
+            <input type="textarea">
+        </div>
+        <button type="submit" style="margin-top: 8px; padding: 4px 8px; background-color: #eaeaea; border: 1px solid grey;">Submit Suggestion</button>
+    </form>
     <p class="getStartedNow invisible"><a href="pages/loginorregister.html" style="text-decoration: none; color: #eaeaea;">Get Started Now</a></p>
 
     <p style="display: flex; justify-content: center; gap: 4px; margin-top: 32px;">View Source Code<a href="https://github.com/ashinsabu/image-seq-password" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" width=20></a></p>
