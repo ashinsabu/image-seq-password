@@ -48,6 +48,10 @@ onAuthStateChanged(auth, (user) => {
         document.querySelector('#infoUsername').innerHTML += `<span style="color: black; font-size: 18px;">${user.displayName}</span>`;
         document.querySelector('#infoEmail').innerHTML += `<span style="color: black; font-size: 16px;">${user.email}</span>`;
     }
+    if(document.querySelector('.homepageCard')){
+        if(auth.currentUser)
+        document.querySelector('.homepageCard').classList.remove('invisible');
+    }
     
   } else {
     // User is signed out
@@ -56,5 +60,6 @@ onAuthStateChanged(auth, (user) => {
     let viewAcc = document.querySelector('#view-acc-button');
     viewAcc.style.display = 'none';
     document.querySelector('#loginregisterbutton').classList.remove('invisible');
+    document.querySelector('.getStartedNow').classList.remove('invisible');
   }
 })

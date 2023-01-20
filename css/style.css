@@ -264,3 +264,66 @@ body{
   .backToGamesPage:active{
     transform: scale(0.96);
   }
+  .homepageCard{
+    background: rgba(255, 255, 255, 0.175);
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    margin-left: 0;
+    margin-right: 0;
+    width: 100vw;
+    /* transform: translateX(-32px); */
+    margin-left: -32px;
+    /* paddingp-right: 16px; */
+    padding-top: 16px;
+    padding-bottom: 16px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    color: white;
+    font-family: 'Space Grotesk', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: center;
+    font-size: 20px;
+    text-shadow: 2px 2px 4px #212121;
+    cursor: pointer;
+    margin-top: 32px;
+  }
+  .getStartedNow{
+    margin-top: 32px; 
+    background-color: #0b7b9e; 
+    width: fit-content; 
+    margin-left: auto; 
+    margin-right: auto; 
+    padding: 8px 16px; 
+    color: #eaeaea;
+    -webkit-animation: glowing 1000ms infinite;
+    -moz-animation: glowing 1000ms infinite;
+    -o-animation: glowing 1000ms infinite;
+    animation: glowing 1000ms infinite;
+  }
+  @-webkit-keyframes glowing {
+    0% {
+      background-color: #0091b2;
+      -webkit-box-shadow: 0 0 3px #0091b2;
+    }
+    50% {
+      background-color: #21c7ed;
+      -webkit-box-shadow: 0 0 15px #21c7ed;
+    }
+    100% {
+      background-color: #0091b2;
+      -webkit-box-shadow: 0 0 3px #0091b2;
+    }
+  }
+  @keyframes glowing {
+    0% {
+      background-color: #0091b2;
+      box-shadow: 0 0 3px #0091b2;
+    }
+    50% {
+      background-color: #21c7ed;
+      box-shadow: 0 0 15px #21c7ed;
+    }
+    100% {
+      background-color: #0091b2;
+      box-shadow: 0 0 3px #0091b2;
+    }
+  }
