@@ -39,6 +39,8 @@ const logIn = (email,password) => {
     .then((userCredential) => {
         // Signed in 
         const user = userCredential.user;
+        document.querySelector(".loginMessage").innerHTML="Logged In. Redirecting...";
+        document.querySelector(".loginMessage").style.color = 'green';
         setTimeout(() => {
             window.location.href = "../index.html";
         },500);
